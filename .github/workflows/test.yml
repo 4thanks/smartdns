@@ -11,13 +11,16 @@ jobs:
   build:
     strategy:
       matrix:
-        goos: [openwrt]
-        goarch: [arm]
-        goarm: [7]
+        goos:
+          - openwrt
+        goarch:
+          - arm
+          - arm64
+        goarm:
+          - 5
+          - 6
+          - 7
         include:
-          - goos: openwrt
-            goarch: arm
-            goarm: 7
           - goos: luci
             goarch: all
           - goos: luci-compat
