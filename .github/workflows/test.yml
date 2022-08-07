@@ -15,6 +15,9 @@ jobs:
         goarch: [arm]
         goarm: [7]
         include:
+          - goos: openwrt
+            goarch: arm
+            goarm: 7
           - goos: luci
             goarch: all
           - goos: luci-compat
